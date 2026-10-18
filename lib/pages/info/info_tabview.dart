@@ -89,7 +89,7 @@ class _InfoTabViewState extends State<InfoTabView> {
               Text('简介', style: TextStyle(fontSize: 18)),
               const SizedBox(height: 8),
               LayoutBuilder(builder: (context, constraints) {
-                final span = TextSpan(text: widget.bangumiItem.summary);
+                final span = TextSpan(text: ChineseScript.instance.display(widget.bangumiItem.summary));
                 final tp =
                     TextPainter(text: span, textDirection: TextDirection.ltr);
                 tp.layout(maxWidth: constraints.maxWidth);

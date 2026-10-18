@@ -105,7 +105,7 @@ class _SourceSheetState extends State<SourceSheet> with KazumiDialogOwner {
         ? plugin.baseUrl
         : plugin.searchURL.replaceAll(
             '@keyword',
-            Uri.encodeQueryComponent(_keywordFor(name)),
+            Uri.encodeQueryComponent(ChineseScript.instance.searchKeyword(_keywordFor(name))),
           );
     try {
       if (await launchUrl(Uri.parse(targetUrl),

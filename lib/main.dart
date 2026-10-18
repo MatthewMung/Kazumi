@@ -71,8 +71,10 @@ void main() async {
   }
   await ChineseScript.instance.initialize();
   // Personal builds cannot use the upstream private mirror signing keys.
-  if (const bool.fromEnvironment('KAZUMI_PUBLIC_API')) {
+  if (const bool.fromEnvironment('KAZUMI_PUBLIC_API') &&
+      !GStorage.getSetting(SettingsKeys.publicApiBuildConfigured)) {
     await GStorage.putSetting(SettingsKeys.bangumiAcceleration, 'direct');
+    await GStorage.putSetting(SettingsKeys.publicApiBuildConfigured, true);
   }
   await DownloadDirectoryService().restoreAccess();
   final showWindowButton = DesktopWindowConfig.showWindowButton;

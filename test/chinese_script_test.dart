@@ -115,7 +115,9 @@ void main() {
   testWidgets(
     'constant text, rich text and selectable summaries update without changing input',
     (tester) async {
-      await script.setPreference(ChineseScriptPreference.simplified);
+      await tester.runAsync(
+        () => script.setPreference(ChineseScriptPreference.simplified),
+      );
       final input = TextEditingController(text: '葬送的芙莉蓮');
       await tester.pumpWidget(
         ChineseScriptScope(
@@ -141,14 +143,18 @@ void main() {
         ),
       );
       expect(find.text('显示设置'), findsOneWidget);
-      await script.setPreference(ChineseScriptPreference.traditional);
+      await tester.runAsync(
+        () => script.setPreference(ChineseScriptPreference.traditional),
+      );
       await tester.pumpAndSettle();
       expect(find.text('顯示設置'), findsOneWidget);
       expect(find.text('頭髮發展'), findsOneWidget);
       expect(find.text('動畫簡介'), findsOneWidget);
       expect(input.text, '葬送的芙莉蓮');
       expect(find.text('https://example.org/动画'), findsOneWidget);
-      await script.setPreference(ChineseScriptPreference.simplified);
+      await tester.runAsync(
+        () => script.setPreference(ChineseScriptPreference.simplified),
+      );
       await tester.pumpAndSettle();
       expect(find.text('显示设置'), findsOneWidget);
       expect(find.text('动画简介'), findsOneWidget);

@@ -90,7 +90,7 @@ class _SearchResultGrid extends StatelessWidget {
     double textHeight(String text, TextStyle style) {
       // Measure with nonlinear accessibility scaling.
       final painter = TextPainter(
-        text: TextSpan(text: text, style: style),
+        text: TextSpan(text: ChineseScript.instance.display(text), style: style),
         textDirection: Directionality.of(context),
         textScaler: MediaQuery.textScalerOf(context),
         locale: Localizations.maybeLocaleOf(context),

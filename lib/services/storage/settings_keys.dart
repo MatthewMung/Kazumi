@@ -42,6 +42,9 @@ class SettingKey<T> {
 // Add new settings here. SettingsKeys is the public typed registry used by
 // callers; new keys can use literal string names directly.
 class SettingsKeys {
+  static const publicApiBuildConfigured = SettingKey<bool>(
+    'publicApiBuildConfigured', false, group: SettingGroup.misc,
+  );
   static const chineseScript = SettingKey<String>(
     'chineseScript',
     'system',
@@ -610,6 +613,7 @@ class SettingsKeys {
     playResume,
     showPlayerError,
     oledEnhance,
+    publicApiBuildConfigured,
     chineseScript,
     displayMode,
     enableGitProxy,

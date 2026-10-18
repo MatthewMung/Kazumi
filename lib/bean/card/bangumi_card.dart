@@ -91,7 +91,7 @@ class BangumiContent extends StatelessWidget {
               );
           final textScaler = ts.clamp(maxScaleFactor: 1.1);
           final painter = TextPainter(
-            text: TextSpan(text: bangumiItem.nameCn, style: style),
+            text: TextSpan(text: ChineseScript.instance.display(bangumiItem.nameCn), style: style),
             textDirection: Directionality.of(context),
             textScaler: textScaler,
           );

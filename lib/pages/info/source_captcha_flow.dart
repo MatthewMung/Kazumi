@@ -25,7 +25,7 @@ class _SourceCaptchaFlow {
       final verified = Completer<String>();
       final config = plugin.antiCrawlerConfig;
       final searchUrl = plugin.searchURL
-          .replaceAll('@keyword', Uri.encodeQueryComponent(keyword));
+          .replaceAll('@keyword', Uri.encodeQueryComponent(ChineseScript.instance.searchKeyword(keyword)));
       Timer? timeout;
       bool finalizing = false;
 
