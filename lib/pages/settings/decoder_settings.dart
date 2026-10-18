@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/settings/settings_detail_scaffold.dart';
 import 'package:kazumi/services/storage/storage.dart';
 import 'package:kazumi/utils/constants.dart';
@@ -16,6 +16,7 @@ class _DecoderSettingsState extends State<DecoderSettings> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return SettingsDetailScaffold(
       title: const Text('硬件解码器'),
       body: SettingsList(

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 import 'package:kazumi/bean/widget/state_presentation.dart';
 
@@ -41,6 +41,7 @@ class SyncPageIntro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
@@ -92,6 +93,7 @@ class SyncFeedback extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Semantics(
       liveRegion: true,

@@ -25,6 +25,7 @@ class _TimelineOptionsButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final scaler = MediaQuery.textScalerOf(context);
     final compact =
         availableWidth < scaler.scale(16) * 22 || scaler.scale(14) > 28;
@@ -73,6 +74,7 @@ class _TimelineOptionsSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Observer(builder: (context) {
       return Column(
         mainAxisSize: MainAxisSize.min,

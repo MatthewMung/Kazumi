@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:kazumi/utils/device.dart';
 
@@ -30,6 +30,7 @@ class DragToMoveArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onPanStart: (_) => (isDesktop()) ? windowManager.startDragging() : null,

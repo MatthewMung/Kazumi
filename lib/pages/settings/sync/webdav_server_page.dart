@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'package:kazumi/bean/settings/settings_detail_scaffold.dart';
@@ -98,9 +98,9 @@ class _WebDavServerPageState extends State<WebDavServerPage> {
                         keyboardType: TextInputType.url,
                         textInputAction: TextInputAction.next,
                         autocorrect: false,
-                        decoration: const InputDecoration(
-                          labelText: '服务器地址',
-                          hintText: 'https://example.com/dav/',
+                        decoration:  InputDecoration(
+                          labelText: ChineseScript.instance.displayNullable('服务器地址'),
+                          hintText: ChineseScript.instance.displayNullable('https://example.com/dav/'),
                           border: OutlineInputBorder(),
                           errorMaxLines: 3,
                         ),
@@ -119,8 +119,8 @@ class _WebDavServerPageState extends State<WebDavServerPage> {
                         enabled: !_busy,
                         textInputAction: TextInputAction.next,
                         autocorrect: false,
-                        decoration: const InputDecoration(
-                          labelText: '用户名',
+                        decoration:  InputDecoration(
+                          labelText: ChineseScript.instance.displayNullable('用户名'),
                           border: OutlineInputBorder(),
                         ),
                       ),

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 Future<bool> isLowResolution() async {
   if (Platform.isMacOS) {

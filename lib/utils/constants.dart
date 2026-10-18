@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:kazumi/request/config/api_endpoints.dart';
 

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/bean/widget/loading_indicator.dart';
@@ -139,7 +139,7 @@ Future<void> showRuleShareDialog(BuildContext context, Plugin plugin) async {
                 borderRadius: BorderRadius.circular(16)),
             constraints: const BoxConstraints(maxHeight: 180),
             child: SingleChildScrollView(
-              child: SelectableText(link,
+              child: SelectableText(link, convert: false,
                   style: Theme.of(context)
                       .textTheme
                       .bodySmall
@@ -295,6 +295,7 @@ class _RuleDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return AlertDialog(
       backgroundColor: colors.surfaceContainerHigh,

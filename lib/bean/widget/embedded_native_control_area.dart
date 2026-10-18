@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/services/platform/desktop_window_config.dart';
 
 /// Reserves space above content for native macOS window controls.
@@ -15,6 +15,7 @@ class EmbeddedNativeControlArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final needsOffset =
         Platform.isMacOS &&
         requireOffset &&

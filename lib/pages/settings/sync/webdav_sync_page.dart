@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'package:kazumi/bean/settings/settings_detail_scaffold.dart';
@@ -79,6 +79,7 @@ class _WebDavSyncPageState extends State<WebDavSyncPage> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final enabled = GStorage.getSetting(SettingsKeys.webDavEnable);
     final history = GStorage.getSetting(SettingsKeys.webDavEnableHistory);
     final collect = GStorage.getSetting(SettingsKeys.webDavEnableCollect);

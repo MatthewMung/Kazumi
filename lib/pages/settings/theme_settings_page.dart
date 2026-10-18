@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kazumi/bean/card/palette_card.dart';
 import 'package:kazumi/utils/constants.dart';
@@ -127,6 +127,7 @@ class _ThemeSettingsPageState extends State<ThemeSettingsPage> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return SettingsDetailScaffold(
       title: const Text('外观设置'),
       body: SettingsList(

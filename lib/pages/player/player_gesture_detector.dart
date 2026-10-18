@@ -1,3 +1,4 @@
+import 'package:kazumi/l10n/chinese_script.dart';
 import 'package:flutter/widgets.dart';
 
 class PlayerGestureDetector extends StatefulWidget {
@@ -34,6 +35,7 @@ class _PlayerGestureDetectorState extends State<PlayerGestureDetector> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return LayoutBuilder(
       builder: (context, constraints) {
         bool isAtEdge(Offset position) =>

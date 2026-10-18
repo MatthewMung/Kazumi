@@ -12,6 +12,7 @@ class _CollectCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     return TabBar(
@@ -67,6 +68,7 @@ class _CollectLayoutSwitch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Row(
       mainAxisSize: MainAxisSize.min,
@@ -131,6 +133,7 @@ class _CollectSortMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return KazumiMenuButton(
       menuChildren: [
         for (final sort in CollectSort.values)

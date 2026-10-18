@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/pages/onboarding/onboarding_step_layout.dart';
 
 class UpdateSourceStep extends StatelessWidget {
@@ -69,6 +69,7 @@ class _OptionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final foreground =

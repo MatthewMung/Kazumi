@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/pages/menu/menu.dart';
 
 class IndexPage extends StatefulWidget {
@@ -13,6 +13,7 @@ class IndexPage extends StatefulWidget {
 class _IndexPageState extends State<IndexPage> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return ScaffoldMenu(location: widget.location);
   }
 }

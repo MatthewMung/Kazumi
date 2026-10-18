@@ -2,7 +2,7 @@
 // Copyright (c) 2026 Mudit Purohit. See licenses/m3e_core.txt.
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/physics.dart';
 
 BoxConstraints _adaptiveBottomSheetConstraints(
@@ -120,6 +120,7 @@ class _MaterialSheetSurfaceState extends State<_MaterialSheetSurface>
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
 

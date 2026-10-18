@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/settings/settings_list.dart';
 import 'package:kazumi/bean/widget/content_section.dart';
 import 'package:kazumi/bean/widget/state_presentation.dart';
@@ -31,6 +31,7 @@ class MySpaceView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return LayoutBuilder(builder: (context, constraints) {
       final inset = constraints.maxWidth < 600 ? 16.0 : 32.0;
       final width = constraints.maxWidth - inset * 2;
@@ -64,6 +65,7 @@ class _WideSpaceLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -160,6 +162,7 @@ class _CompactSpaceLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -240,6 +243,7 @@ class _WatchStatsPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Material(
       color: compact ? colors.primaryContainer : colors.surfaceContainerHigh,
@@ -329,6 +333,7 @@ class _StatCount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return Column(
       children: [
@@ -356,6 +361,7 @@ class _SpaceHeading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Row(
       children: [
@@ -389,6 +395,7 @@ class _RulesTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final text = Theme.of(context).textTheme;
     return _ExpressiveAction(
@@ -460,6 +467,7 @@ class _ToolTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final text = Theme.of(context).textTheme;
     return _ExpressiveAction(
       color: color,
@@ -506,6 +514,7 @@ class _PreferencesPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Material(
       color: colors.surfaceContainerLow,
@@ -569,6 +578,7 @@ class _PreferenceAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return _ExpressiveAction(
       color: colors.secondaryContainer,
@@ -604,6 +614,7 @@ class MySettingsButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Tooltip(
       message: '全部设置',
@@ -714,6 +725,7 @@ class _ExpressiveActionState extends State<_ExpressiveAction> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final reducedMotion = MediaQuery.disableAnimationsOf(context);
     final duration = reducedMotion
         ? Duration.zero
@@ -781,6 +793,7 @@ class _AdaptivePair extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     if (stack) {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

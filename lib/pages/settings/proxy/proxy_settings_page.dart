@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/bean/settings/network_mirror_settings.dart';
@@ -31,6 +31,7 @@ class _ProxySettingsPageState extends State<ProxySettingsPage> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final proxyEnabled = GStorage.getSetting(SettingsKeys.proxyEnable);
     return SettingsDetailScaffold(
       title: const Text('网络设置'),

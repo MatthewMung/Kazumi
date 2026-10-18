@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:scrollview_observer/scrollview_observer.dart';
 
@@ -58,6 +58,7 @@ class _DownloadEpisodeSheetState extends State<DownloadEpisodeSheet> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final downloadedUrls = _collectDownloadedUrls();
     final selectableEpisodes = <int>[
       for (int i = 1; i <= episodeCount; i++)
@@ -250,6 +251,7 @@ class _EpisodeTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colorScheme = Theme.of(context).colorScheme;
     final backgroundColor = isDownloaded
         ? colorScheme.surfaceContainerLow

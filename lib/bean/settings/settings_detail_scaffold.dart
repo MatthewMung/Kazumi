@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/appbar/sys_app_bar.dart';
 
 class SettingsPaneScope extends InheritedWidget {
@@ -46,6 +46,7 @@ class SettingsDetailScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final scope = SettingsPaneScope.of(context);
     final PreferredSizeWidget appBar;
 

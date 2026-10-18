@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/modules/danmaku/danmaku_module.dart';
 
 Color generateDanmakuColor(int colorValue) {

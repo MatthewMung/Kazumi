@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
@@ -241,6 +241,7 @@ class _RatingReviewDialogState extends State<RatingReviewDialog> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final media = MediaQuery.of(context);
     final fullscreen = media.size.width < 600 || media.size.height < 600;
     final colors = Theme.of(context).colorScheme;

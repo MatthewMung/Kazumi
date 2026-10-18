@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
@@ -91,6 +91,7 @@ class _VideoDetailsSheetState extends State<_VideoDetailsSheet>
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return ScaffoldMessenger(
       child: Builder(
           builder: (context) => Scaffold(

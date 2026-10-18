@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:material_new_shapes/material_new_shapes.dart';
 
 /// Keeps the rule catalog lazy within the responsive onboarding scroll surface.
@@ -151,6 +151,7 @@ class OnboardingStepIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final (background, foreground) = switch (shape) {
       OnboardingIconShape.cookie => (
@@ -202,6 +203,7 @@ class OnboardingHint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),

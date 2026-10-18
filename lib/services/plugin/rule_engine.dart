@@ -1,3 +1,4 @@
+import 'package:kazumi/l10n/chinese_script.dart';
 import 'package:dio/dio.dart';
 import 'package:kazumi/modules/search/plugin_search_module.dart';
 import 'package:kazumi/plugins/api_rule_config.dart';
@@ -38,6 +39,7 @@ class RuleEngine {
     String keyword, {
     CancelToken? cancelToken,
   }) async {
+    keyword = ChineseScript.instance.searchKeyword(keyword);
     late final PreparedRuleRequest request;
     try {
       request = config.searchMode == RuleMode.api

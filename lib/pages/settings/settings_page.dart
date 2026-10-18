@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'package:kazumi/bean/appbar/sys_app_bar.dart';
@@ -220,6 +220,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return LayoutBuilder(builder: (context, constraints) {
       final wide = constraints.maxWidth > LayoutBreakpoint.compact['width']!;
       return NavigatorPopHandler<Object?>(
@@ -281,6 +282,7 @@ class SettingsIndexPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     if (SettingsPaneScope.of(context)?.embedded ?? false) {
       return const PlayerSettingsPage();
     }
@@ -312,6 +314,7 @@ class _SettingsMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return ScrollConfiguration(
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
       child: ListView(
@@ -366,6 +369,7 @@ class _RailDestination extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     final foreground = selected

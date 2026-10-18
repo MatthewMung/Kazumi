@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 class PlayerScreenshotFeedbackOverlay extends StatelessWidget {
   const PlayerScreenshotFeedbackOverlay({
@@ -10,6 +10,7 @@ class PlayerScreenshotFeedbackOverlay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return IgnorePointer(
       child: AnimatedBuilder(
         animation: animation,

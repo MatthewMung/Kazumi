@@ -9,6 +9,7 @@ class _ImageSourceSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Row(
         spacing: 4,
@@ -78,6 +79,7 @@ class _ImageSearchEmblem extends StatelessWidget {
   final double size;
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return StateIconBadge(
       icon: Icons.image_search_rounded,
@@ -94,6 +96,7 @@ class _ScreenshotTip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final type = Theme.of(context).textTheme;
     return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -128,6 +131,7 @@ class _ImageSearchResults extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     if (searching) {
       return const _ImageSearchLoadingState();
     }
@@ -187,6 +191,7 @@ class _ImageSearchLoadingState extends StatelessWidget {
   const _ImageSearchLoadingState();
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final type = Theme.of(context).textTheme;
     return Semantics(
         liveRegion: true,
@@ -218,6 +223,7 @@ class _BestMatch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final type = Theme.of(context).textTheme;
     final similarity = result.similarity;
@@ -333,6 +339,7 @@ class _OtherMatch extends StatelessWidget {
   final ValueChanged<String> onSelect;
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final type = Theme.of(context).textTheme;
     return Material(
@@ -395,6 +402,7 @@ class _Metadata extends StatelessWidget {
   final String label;
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -418,6 +426,7 @@ class _TraceFrame extends StatelessWidget {
   final ResultItem result;
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final source = result.image;
     final colors = Theme.of(context).colorScheme;
     final placeholder = Center(

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 final List<Map<String, dynamic>> colorThemeTypes = [
   {'color': Colors.green, 'label': '默认'},

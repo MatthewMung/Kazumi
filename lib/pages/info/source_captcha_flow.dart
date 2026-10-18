@@ -116,6 +116,7 @@ class _VerifyDialogFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     return AlertDialog(
@@ -277,6 +278,7 @@ class _CaptchaDialogState extends State<_CaptchaDialog> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     return _VerifyDialogFrame(
@@ -449,6 +451,7 @@ class _VerificationCompleteDialogState
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     return PopScope(
       canPop: false,

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/pages/plugin_editor/rule_management_widgets.dart';
 
 class EditorTextField extends StatelessWidget {
@@ -19,6 +19,7 @@ class EditorTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       Text(label, style: theme.textTheme.labelLarge),

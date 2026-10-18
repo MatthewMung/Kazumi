@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/widget/state_presentation.dart';
 
 /// Shrink-wraps in slivers and scrolls within bounded page or media surfaces.
@@ -24,6 +24,7 @@ class GeneralErrorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final errorActions = [

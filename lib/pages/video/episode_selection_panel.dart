@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:scrollview_observer/scrollview_observer.dart';
 
@@ -98,6 +98,7 @@ class EpisodeSelectionPanelState extends State<EpisodeSelectionPanel> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final road = _visibleRoad >= 0 && _visibleRoad < widget.roads.length
@@ -396,6 +397,7 @@ class _RoadSelectorState extends State<_RoadSelector> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final canSwitch = widget.roads.length > 1;
@@ -569,6 +571,7 @@ class _EpisodeRowState extends State<_EpisodeRow>
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final foreground = widget.selected ? colors.onPrimary : colors.onSurface;

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 class PlayerContentTabs extends StatelessWidget {
   const PlayerContentTabs({
@@ -12,6 +12,7 @@ class PlayerContentTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final height = (MediaQuery.textScalerOf(context).scale(14) * 1.5 + 16)

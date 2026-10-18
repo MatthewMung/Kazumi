@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
@@ -57,6 +57,7 @@ class _SetDisplayModeState extends State<SetDisplayMode> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return SettingsDetailScaffold(
       title: const Text('屏幕帧率设置'),
       body: (modes.isEmpty)

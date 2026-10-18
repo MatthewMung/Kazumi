@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/bean/settings/settings_list.dart';
 import 'package:kazumi/services/network/bangumi_acceleration.dart';
@@ -22,6 +22,7 @@ class _NetworkMirrorSettingsState extends State<NetworkMirrorSettings> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final bangumiAcceleration = BangumiAcceleration.current;
     final gitProxy = GStorage.getSetting(SettingsKeys.enableGitProxy);
     final imageAcceleration = ImageAcceleration.fromSetting(

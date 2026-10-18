@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 class PlayPauseIcon extends StatefulWidget {
   final bool playing;
@@ -47,6 +47,7 @@ class _PlayPauseIconState extends State<PlayPauseIcon>
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return AnimatedIcon(
       color: widget.iconColor,
       size: widget.iconSize,

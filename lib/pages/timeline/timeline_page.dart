@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -132,6 +132,7 @@ class _TimelinePageState extends State<TimelinePage> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return DefaultTabController(
       length: 7,
       initialIndex: DateTime.now().weekday - 1,
@@ -438,6 +439,7 @@ class _TimelineScrollView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return CustomScrollView(
       slivers: [
         SliverOverlapInjector(

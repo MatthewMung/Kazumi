@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kazumi/bean/widget/kazumi_menu.dart';
 import 'package:kazumi/modules/bangumi/bangumi_item.dart';
@@ -58,6 +58,7 @@ class _CollectButtonState extends State<CollectButton> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final collectType = CollectType.fromValue(
       _collectController.getCollectType(widget.bangumiItem),
     );

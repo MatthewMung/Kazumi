@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
@@ -90,6 +90,7 @@ class _SyncPlaySheetScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final Size size = MediaQuery.sizeOf(context);
     final double keyboardInset = MediaQuery.viewInsetsOf(context).bottom;
 
@@ -160,6 +161,7 @@ class _SyncPlayHomeSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
 
     return Observer(builder: (context) {
@@ -380,6 +382,7 @@ class _ChoiceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return TonalCard(
       child: InkWell(
@@ -478,6 +481,7 @@ class _SyncPlayRoomSheetState extends State<_SyncPlayRoomSheet> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final bool isCreate = widget.isCreate;
 
     return _SyncPlaySheetScaffold(
@@ -633,6 +637,7 @@ class _SyncPlayServerSheetState extends State<_SyncPlayServerSheet> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return _SyncPlaySheetScaffold(
       title: '同步服务器',
       description: '房间成员需使用同一服务器',
@@ -723,6 +728,7 @@ class _RoomNumberCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final ThemeData theme = Theme.of(context);
     final ColorScheme colorScheme = theme.colorScheme;
 
@@ -797,6 +803,7 @@ class _CopyButtonState extends State<_CopyButton> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return IconButton(
       onPressed: _copy,
       tooltip: _copied ? '已复制' : '复制',

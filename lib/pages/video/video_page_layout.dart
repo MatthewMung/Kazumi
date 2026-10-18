@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 typedef VideoPlayerLayout = ({bool fillsWindow, bool hasSidePanel});
 
@@ -22,6 +22,7 @@ class VideoPageLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return LayoutBuilder(builder: (context, constraints) {
       final fillsWindow =
           fullscreen || isPip || constraints.maxWidth > constraints.maxHeight;

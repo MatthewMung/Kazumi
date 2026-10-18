@@ -1,3 +1,4 @@
+import 'package:kazumi/l10n/chinese_script.dart';
 import 'package:kazumi/services/logging/logger.dart';
 import 'package:kazumi/request/config/api_endpoints.dart';
 import 'package:kazumi/request/clients/bangumi_client.dart';
@@ -283,7 +284,7 @@ class BangumiApi {
 
     final filter = <String, dynamic>{
       "type": [2],
-      "tag": tags,
+      "tag": tags.map(ChineseScript.instance.searchKeyword).toList(),
       "rank": rankFilter,
       "nsfw": false
     };
@@ -300,7 +301,7 @@ class BangumiApi {
     }
 
     return <String, dynamic>{
-      'keyword': keyword,
+      'keyword': ChineseScript.instance.searchKeyword(keyword),
       'sort': sort,
       "filter": filter,
     };

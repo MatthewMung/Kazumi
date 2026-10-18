@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import 'package:kazumi/bean/widget/loading_indicator.dart';
@@ -44,6 +44,7 @@ class _DisclaimerStepState extends State<DisclaimerStep> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final textTheme = Theme.of(context).textTheme;
     return OnboardingStepLayout(
       leading: const OnboardingStepIcon(icon: Icons.waving_hand_rounded),

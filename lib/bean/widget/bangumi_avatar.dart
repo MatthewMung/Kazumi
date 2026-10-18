@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/services/logging/logger.dart';
 
 class BangumiAvatar extends StatelessWidget {
@@ -14,6 +14,7 @@ class BangumiAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     if (imageUrl.isEmpty) return _fallback();
 
     return CachedNetworkImage(

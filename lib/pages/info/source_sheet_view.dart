@@ -119,6 +119,7 @@ class _SourceSheetViewState extends State<_SourceSheetView> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final pending = widget.groups.where((group) => group.isSearching).length;
     final resultCount = widget.groups
         .where((group) => group.hasResults)

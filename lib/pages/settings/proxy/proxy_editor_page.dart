@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/bean/settings/settings_detail_scaffold.dart';
 import 'package:kazumi/services/storage/storage.dart';
@@ -87,6 +87,7 @@ class _ProxyEditorPageState extends State<ProxyEditorPage> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return SettingsDetailScaffold(
       title: const Text('代理配置'),
       body: SingleChildScrollView(
@@ -100,9 +101,9 @@ class _ProxyEditorPageState extends State<ProxyEditorPage> {
                 children: [
                   TextFormField(
                     controller: urlController,
-                    decoration: const InputDecoration(
-                      labelText: '代理地址',
-                      hintText: 'http://127.0.0.1:7890',
+                    decoration:  InputDecoration(
+                      labelText: ChineseScript.instance.displayNullable('代理地址'),
+                      hintText: ChineseScript.instance.displayNullable('http://127.0.0.1:7890'),
                       border: OutlineInputBorder(),
                     ),
                     validator: (value) {
@@ -118,9 +119,9 @@ class _ProxyEditorPageState extends State<ProxyEditorPage> {
                   const SizedBox(height: 16),
                   TextFormField(
                     controller: testUrlController,
-                    decoration: const InputDecoration(
-                      labelText: '测试地址',
-                      hintText: 'https://www.google.com',
+                    decoration:  InputDecoration(
+                      labelText: ChineseScript.instance.displayNullable('测试地址'),
+                      hintText: ChineseScript.instance.displayNullable('https://www.google.com'),
                       border: OutlineInputBorder(),
                     ),
                   ),

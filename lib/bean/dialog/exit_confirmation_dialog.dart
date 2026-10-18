@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 enum ExitDialogAction { exit, minimizeToTray }
 
@@ -29,6 +29,7 @@ class _ExitConfirmationDialogState extends State<ExitConfirmationDialog> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final buttonStyle = ButtonStyle(

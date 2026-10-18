@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:ui';
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:window_manager/window_manager.dart';
@@ -331,6 +331,7 @@ class _InfoPageState extends State<InfoPage>
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final showWindowButton = DesktopWindowConfig.showWindowButton;
     final topOffset = Platform.isMacOS && showWindowButton ? 22.0 : 0.0;
     return Scaffold(
@@ -493,6 +494,7 @@ class _InfoHeaderBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     if (imageUrl.isEmpty) {
       return const SizedBox.shrink();
     }

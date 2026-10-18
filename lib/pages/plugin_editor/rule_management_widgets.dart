@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 class RulePageIntro extends StatelessWidget {
   const RulePageIntro({
@@ -16,6 +16,7 @@ class RulePageIntro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     return Container(
@@ -68,6 +69,7 @@ class RuleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return Material(
       color: theme.colorScheme.surfaceContainerLow,

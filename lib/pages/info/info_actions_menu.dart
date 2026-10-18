@@ -2,7 +2,7 @@ import 'dart:ui' as ui;
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kazumi/bean/dialog/dialog.dart';
 import 'package:kazumi/bean/widget/kazumi_menu.dart';
@@ -104,6 +104,7 @@ class _InfoActionsMenuState extends State<InfoActionsMenu> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return KazumiMenuButton(
       menuChildren: [
         KazumiMenuItem(

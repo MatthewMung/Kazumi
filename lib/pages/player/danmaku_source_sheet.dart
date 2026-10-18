@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:math' as math;
 import 'dart:ui' show PointerDeviceKind;
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kazumi/bean/dialog/adaptive_bottom_sheet.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
@@ -295,6 +295,7 @@ class _DanmakuSourceSheetState extends State<_DanmakuSourceSheet> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return AnimatedPadding(
       duration: const Duration(milliseconds: 180),
       padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
@@ -597,6 +598,7 @@ class _SheetHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final subtitle = this.subtitle;
     return Padding(
@@ -680,6 +682,7 @@ class _EpisodeToolbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final showSegments = total > _episodeSegmentSize;
     final segmentCount = (total / _episodeSegmentSize).ceil();
@@ -811,6 +814,7 @@ class _SegmentChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Padding(
       padding: const EdgeInsets.only(right: 8),
       child: ChoiceChip(

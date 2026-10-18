@@ -183,6 +183,7 @@ class _SearchFilterSheetState extends State<_SearchFilterSheet> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final keyboardInset = MediaQuery.viewInsetsOf(context).bottom;
     final colors = Theme.of(context).colorScheme;
     final dateSummary = _draft.season.isNotEmpty

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 class RuleCard extends StatelessWidget {
   const RuleCard({
@@ -26,6 +26,7 @@ class RuleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final text = Theme.of(context).textTheme;
     // Keep menu focus from activating the enclosing InkWell's highlight.

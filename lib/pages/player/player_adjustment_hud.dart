@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/utils/format.dart';
 
 enum PlayerAdjustmentHudType {
@@ -115,6 +115,7 @@ class _PlayerAdjustmentHudState extends State<PlayerAdjustmentHud> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colorScheme = Theme.of(context).colorScheme;
     final accent = _accent(colorScheme);
     final container = _container(colorScheme);
@@ -609,6 +610,7 @@ class _PlayerSeekHudState extends State<PlayerSeekHud> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colorScheme = Theme.of(context).colorScheme;
     final accent = colorScheme.secondaryContainer;
     final container = colorScheme.secondary;
@@ -792,6 +794,7 @@ class _SeekProgressBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return LayoutBuilder(
       builder: (context, constraints) {
         final width = constraints.maxWidth * progress.clamp(0.0, 1.0);
@@ -844,6 +847,7 @@ class _PlayerSpeedHudState extends State<PlayerSpeedHud> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colorScheme = Theme.of(context).colorScheme;
     final container = colorScheme.inverseSurface;
     final onContainer = colorScheme.onInverseSurface;

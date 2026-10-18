@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:material_new_shapes/material_new_shapes.dart';
 
 class LoadingIndicator extends StatefulWidget {
@@ -60,6 +60,7 @@ class _LoadingIndicatorState extends State<LoadingIndicator>
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Semantics(
       label: widget.semanticsLabel,
       child: RepaintBoundary(

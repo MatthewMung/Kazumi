@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/modules/bangumi/episode_item.dart';
 
 class EpisodeCommentsPicker extends StatelessWidget {
@@ -13,6 +13,7 @@ class EpisodeCommentsPicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final type = Theme.of(context).textTheme;
     return Dialog(

@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 class PlayerScreenshotImage extends StatelessWidget {
   const PlayerScreenshotImage({

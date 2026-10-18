@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bbcode/bbcode_widget.dart';
 import 'package:kazumi/bean/widget/bangumi_avatar.dart';
 import 'package:kazumi/modules/comments/comment_item.dart';
@@ -36,6 +36,7 @@ class _UserCommentsCardState extends State<UserCommentsCard> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final type = Theme.of(context).textTheme;
     final replies = widget._replies;
@@ -149,6 +150,7 @@ class _CommentAuthor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return Row(
       children: [
@@ -196,6 +198,7 @@ class _CommentBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return DefaultTextStyle.merge(
       style: theme.textTheme.bodyMedium?.copyWith(
@@ -218,6 +221,7 @@ class UserCommentsCardBone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return const _CommentSurface(
       child: Skeletonizer.zone(
         child: Column(
@@ -251,6 +255,7 @@ class _CommentSurface extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Material(

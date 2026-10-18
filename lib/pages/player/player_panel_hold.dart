@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/widget/collect_button.dart';
 import 'package:kazumi/bean/widget/kazumi_menu.dart';
 import 'package:kazumi/modules/bangumi/bangumi_item.dart';
@@ -110,6 +110,7 @@ class _PlayerPanelHoldMouseRegionState
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return MouseRegion(
       cursor: widget.cursor,
       onEnter: (_) => _acquireHold(),
@@ -168,6 +169,7 @@ class _PlayerPanelHoldMenuAnchorState extends State<PlayerPanelHoldMenuAnchor> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return KazumiMenuButton(
       animated: false,
       onOpen: _handleOpen,
@@ -219,6 +221,7 @@ class _PlayerPanelHoldCollectButtonState
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return CollectButton(
       bangumiItem: widget.bangumiItem,
       color: widget.color,

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/widget/bangumi_avatar.dart';
 import 'package:kazumi/modules/staff/staff_item.dart';
 
@@ -12,6 +12,7 @@ class StaffCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return ListTile(
       leading: BangumiAvatar(
         imageUrl: staffFullItem.staff.images?.grid ?? '',

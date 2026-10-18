@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/modules/bangumi/episode_item.dart';
@@ -136,6 +136,7 @@ class _EpisodeCommentsSheetState extends State<EpisodeCommentsSheet>
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Observer(builder: (context) {
       final matchesEpisode = _controller.commentsEpisode == _selectedEpisode;
       final comments = _controller.episodeCommentsList.toList();

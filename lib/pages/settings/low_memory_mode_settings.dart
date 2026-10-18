@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/bean/settings/settings_list.dart';
 import 'package:kazumi/bean/widget/split_list_row.dart';
@@ -10,6 +10,7 @@ class LowMemoryModeSettingsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return _ModeBuilder(builder: (context, mode, isMetered) {
       return SettingsTile(
         leading: Icons.data_saver_on_rounded,
@@ -51,6 +52,7 @@ class _LowMemoryModeDialogState extends State<_LowMemoryModeDialog> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     return AlertDialog(
@@ -171,6 +173,7 @@ class _ModeBuilderState extends State<_ModeBuilder> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return StreamBuilder<void>(
       stream: _settingsChanges,
       builder: (context, _) => ValueListenableBuilder<bool>(

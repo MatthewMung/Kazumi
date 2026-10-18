@@ -40,6 +40,7 @@ class _SearchSortMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return KazumiMenuButton(
       animated: true,
@@ -81,6 +82,7 @@ class _SearchResultGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final textTheme = Theme.of(context).textTheme;
     final titleStyle = textTheme.titleSmall!
         .copyWith(fontWeight: FontWeight.w600, height: 1.4);
@@ -145,6 +147,7 @@ class _SearchResultCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final title = item.nameCn.isNotEmpty ? item.nameCn : item.name;
     final year = item.airDate.length >= 4 ? item.airDate.substring(0, 4) : '';
@@ -205,6 +208,7 @@ class _SearchLoadingState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return Padding(
         padding: const EdgeInsets.symmetric(vertical: 48, horizontal: 16),

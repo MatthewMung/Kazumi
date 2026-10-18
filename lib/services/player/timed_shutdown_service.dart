@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:kazumi/l10n/material.dart';
+import 'package:flutter/cupertino.dart' hide Text;
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/services/logging/logger.dart';
 
@@ -188,6 +188,7 @@ class _CustomTimerDialogState extends State<_CustomTimerDialog> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return AlertDialog(
       title: const Text('自定义定时'),
       content: SizedBox(

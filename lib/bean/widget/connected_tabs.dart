@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 // Material 3 connected-button small tokens.
 
@@ -23,6 +23,7 @@ class ConnectedTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final tabController = controller ?? DefaultTabController.of(context);
     assert(labels.isNotEmpty && labels.length == tabController.length);
 
@@ -81,6 +82,7 @@ class _ConnectedSegmentState extends State<_ConnectedSegment> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final selection = widget.selection;

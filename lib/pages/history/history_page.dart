@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kazumi/bean/appbar/sys_app_bar.dart';
@@ -91,6 +91,7 @@ class _HistoryPageState extends State<HistoryPage> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Observer(builder: (context) {
       final entries = widget.controller.histories.toList();
       return PopScope(
@@ -217,6 +218,7 @@ class _HistoryCardState extends State<_HistoryCard> with KazumiDialogOwner {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Observer(builder: (context) {
       // getCollectType reads storage, so track the observable list explicitly.
       _collectController.collectibles.length;

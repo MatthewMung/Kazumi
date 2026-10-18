@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kazumi/bean/card/network_img_layer.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
@@ -19,6 +19,7 @@ class BangumiCardV extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Card(
       elevation: 0,
       clipBehavior: Clip.antiAlias,
@@ -77,6 +78,7 @@ class BangumiContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final ts = MediaQuery.textScalerOf(context);
 
     return Expanded(

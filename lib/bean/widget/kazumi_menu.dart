@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 typedef KazumiMenuBuilder =
     Widget Function(BuildContext context, VoidCallback? toggle);
@@ -38,6 +38,7 @@ class KazumiMenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return MenuButtonTheme(
       data: MenuButtonThemeData(
         // Submenu entries must use the same inset as ordinary menu items.
@@ -85,6 +86,7 @@ class KazumiMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final color = destructive
         ? colors.error

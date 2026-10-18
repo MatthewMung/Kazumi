@@ -1,3 +1,4 @@
+import 'package:kazumi/l10n/chinese_script.dart';
 import 'package:kazumi/modules/danmaku/danmaku_ch_convert.dart';
 import 'package:kazumi/modules/danmaku/danmaku_episode_response.dart';
 import 'package:kazumi/modules/danmaku/danmaku_module.dart';
@@ -36,7 +37,7 @@ class DanmakuApi {
         ApiEndpoints.dandanAPIDomain + ApiEndpoints.dandanAPISearchEpisodes;
     final jsonData = await _client.get(
       endPoint,
-      queryParameters: {'anime': title, 'v2': 'true'},
+      queryParameters: {'anime': ChineseScript.instance.searchKeyword(title), 'v2': 'true'},
     );
     return DanmakuSearchResponse.fromJson(jsonData);
   }

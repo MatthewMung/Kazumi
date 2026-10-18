@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:media_kit_video/media_kit_video.dart';
 import 'package:kazumi/pages/player/player_controller.dart';
@@ -18,6 +18,7 @@ class PlayerItemSurface extends StatefulWidget {
 class _PlayerItemSurfaceState extends State<PlayerItemSurface> {
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final playerController = widget.playerController;
     return Observer(builder: (context) {
       if (playerController.playback.loading ||

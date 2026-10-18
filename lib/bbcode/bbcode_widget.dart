@@ -1,5 +1,5 @@
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:antlr4/antlr4.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:kazumi/bean/widget/image_preview.dart';
@@ -55,6 +55,7 @@ class _BBCodeWidgetState extends State<BBCodeWidget> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     BBCodeParser.checkVersion();
     final input = InputStream.fromString(widget.bbcode);
     final lexer = BBCodeLexer(input);
@@ -89,7 +90,7 @@ class _BBCodeWidgetState extends State<BBCodeWidget> {
                                 ? _parseColor(e.color!)
                                 : null;
                 return TextSpan(
-                  text: e.text,
+                  text: ChineseScriptScope.of(context).display(e.text),
                   mouseCursor: (e.link != null || e.masked)
                       ? SystemMouseCursors.click
                       : SystemMouseCursors.text,

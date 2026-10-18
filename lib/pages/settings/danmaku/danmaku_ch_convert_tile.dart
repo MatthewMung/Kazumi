@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/bean/settings/settings_dropdown_tile.dart';
 import 'package:kazumi/modules/danmaku/danmaku_ch_convert.dart';
@@ -41,6 +41,7 @@ class _DanmakuChConvertTileState extends State<DanmakuChConvertTile> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return StreamBuilder<void>(
       stream: _settingsChanges,
       builder: (context, _) {

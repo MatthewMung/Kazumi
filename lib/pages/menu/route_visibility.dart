@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 /// Whether the surrounding route subtree is covered by another page.
 ///

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/bean/settings/settings_detail_scaffold.dart';
@@ -147,6 +147,7 @@ class _PluginTestPageState extends State<PluginTestPage> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     return SettingsDetailScaffold(
       title: const Text('规则测试'),
@@ -412,7 +413,7 @@ class _PluginTestPageState extends State<PluginTestPage> {
               child: SingleChildScrollView(
                 controller: controller,
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-                child: SelectableText(raw,
+                child: SelectableText(raw, convert: false,
                     style: theme.textTheme.bodySmall
                         ?.copyWith(fontFamily: 'monospace')),
               ),

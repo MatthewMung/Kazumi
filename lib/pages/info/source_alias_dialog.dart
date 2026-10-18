@@ -116,6 +116,7 @@ class _AliasPickerDialogState extends State<_AliasPickerDialog> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return Dialog(
       clipBehavior: Clip.antiAlias,
       child: SizedBox(

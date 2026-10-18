@@ -1,5 +1,5 @@
 import 'package:canvas_danmaku/canvas_danmaku.dart';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 import 'package:kazumi/bean/dialog/adaptive_bottom_sheet.dart';
 import 'package:kazumi/bean/dialog/material_bottom_sheet.dart';
@@ -76,6 +76,7 @@ class _DanmakuSettingsSheetState extends State<_DanmakuSettingsSheet> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return DefaultTabController(
       length: 2,
       child: Column(

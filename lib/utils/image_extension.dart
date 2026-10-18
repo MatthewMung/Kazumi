@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 
 extension ImageExtension on num {
   int cacheSize(BuildContext context) {

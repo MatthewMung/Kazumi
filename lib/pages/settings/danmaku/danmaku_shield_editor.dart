@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import 'package:kazumi/bean/widget/content_section.dart';
@@ -40,6 +40,7 @@ class _DanmakuShieldEditorState extends State<DanmakuShieldEditor> {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     return ListView(
       padding: widget.padding,
       children: [

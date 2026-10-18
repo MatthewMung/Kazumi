@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:kazumi/app_module.dart';
 import 'package:kazumi/app_widget.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -69,6 +69,11 @@ void main() async {
         }));
     return;
   }
+  await ChineseScript.instance.initialize();
+  // Personal builds cannot use the upstream private mirror signing keys.
+  if (const bool.fromEnvironment('KAZUMI_PUBLIC_API')) {
+    await GStorage.putSetting(SettingsKeys.bangumiAcceleration, 'direct');
+  }
   await DownloadDirectoryService().restoreAccess();
   final showWindowButton = DesktopWindowConfig.showWindowButton;
   if (isDesktop()) {
@@ -105,7 +110,10 @@ void main() async {
       provide: (scoped) {
         scoped.addChangeNotifier<ThemeProvider>(ThemeProvider.new);
       },
-      child: const AppWidget(),
+      child: ChineseScriptScope(
+        notifier: ChineseScript.instance,
+        child: const AppWidget(),
+      ),
     ),
   );
 }

@@ -55,6 +55,7 @@ class _CollectPosterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final scaler = MediaQuery.textScalerOf(context);
@@ -227,6 +228,7 @@ class _CollectListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
     final item = entry.bangumiItem;
@@ -364,6 +366,7 @@ class _CollectEntryMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final colors = Theme.of(context).colorScheme;
     final type = CollectType.fromValue(entry.type);
     final title = CollectLibraryQuery.titleOf(entry);

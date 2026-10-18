@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:kazumi/l10n/material.dart';
 import 'package:material_new_shapes/material_new_shapes.dart';
 
 class StateIconBadge extends StatelessWidget {
@@ -87,6 +87,7 @@ class StateActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ChineseScriptScope.of(context);
     final button = _tonal ? FilledButton.tonalIcon : FilledButton.icon;
     final label = Text(text, textAlign: TextAlign.center);
     return button(
